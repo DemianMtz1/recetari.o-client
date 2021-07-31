@@ -1,0 +1,59 @@
+@import "../../../assets/styles/variables";
+
+.text-header-wrapper {
+    color: $logo-secondary-color;
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+.img-header-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+        margin: 0 auto;
+        width: 70%;
+    }
+}
+
+.text-section {
+    color: $logo-secondary-color;
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+.card {
+    background-color: $logo-color !important;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .text-header-wrapper {
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 2rem;
+        }
+        button {
+            width: 50%;
+        }
+    }
+}
