@@ -1,8 +1,12 @@
-@import './_variables.scss';
-*{
+@import "./_variables.scss";
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+}
+p{
+    margin: 0px;
+    padding: 0;
 }
 body {
     //background: radial-gradient($primary-color, #c0b8a8);
@@ -30,4 +34,89 @@ body {
     &:hover {
         background-color: $secondary-color;
     }
+}
+
+.secondary-button {
+    border: none;
+    background-color: $third-color;
+    border-radius: 1.5rem;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    padding: 0.5rem 1rem;
+    transition: all 300ms;
+    &:hover {
+        background-color: $third-color-hover;
+    }
+}
+
+.icon {
+    color: $logo-color;
+    font-size: 30px;
+    cursor: pointer;
+    &-sm {
+        color: $logo-color;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+}
+
+.card{
+    position: unset !important;
+}
+
+.list-group-item {
+    position: unset !important;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+    box-shadow: none;
+    outline: none;
+    transition: all 250ms;
+    padding-bottom: 5px;
+    width: 100%;
+    &:focus {
+        border-width: 2px;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secondary-color;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+    box-shadow: none;
+    outline: none;
+    transition: all 250ms;
+    width: 100%;
+    &:focus {
+        border-width: 2px;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secondary-color;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+select {
+    border: 1px solid $secondary-color;
+}
+/*
+    UTILITIES
+*/
+
+.bg-primary-color{
+    background-color: $logo-color;
+}
+
+.text-primary-color{
+    color: $logo-color;
+}
+
+.pointer{
+    cursor: pointer;
 }

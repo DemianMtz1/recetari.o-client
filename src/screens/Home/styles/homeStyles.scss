@@ -39,8 +39,9 @@
 }
 
 .card {
-    background-color: $logo-color !important;
-    color: white;
+    h5{
+        font-weight: bold;
+    }
 }
 
 @media only screen and (min-width: 768px) {

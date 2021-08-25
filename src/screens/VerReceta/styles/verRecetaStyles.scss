@@ -1,0 +1,108 @@
+@import "../../../assets/styles/variables";
+.ver-receta-container {
+    position: unset;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.img-abs-receta {
+    bottom: 0;
+    height: 300px;
+    position: absolute;
+    right: -5%;
+    width: 300px;
+}
+.wrapper-section {
+    section {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 0;
+        height: auto;
+        width: 100%;
+        .ver-receta {
+            background-color: white;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            height: 100%;
+            width: 100%;
+            .img-receta-wrapper {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                flex-flow: wrap column;
+                width: 100%;
+                img {
+                    height: 100px;
+                    width: 100px;
+                }
+                p {
+                    font-size: 20px;
+                    font-family: $noto-sans;
+                }
+            }
+
+            .receta-wrapper {
+                width: 100%;
+                section {
+                    height: 100%;
+                    div {
+                        h3 {
+                            color: $primary-text-color;
+                            font-size: 17px;
+                            font-family: $quick-sands;
+                            margin-right: 10px;
+                        }
+                        p {
+                            font-size: 16px;
+                            font-family: $quick-sands;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ver-receta-container {
+        position: relative;
+    }
+    .wrapper-section {
+        display: flex;
+        justify-content: center;
+        section {
+            width: 50%;
+            .ver-receta {
+                .img-receta-wrapper {
+                    img {
+                        height: 150px;
+                        width: 150px;
+                    }
+                    p {
+                        font-size: 26px;
+                    }
+                }
+                .receta-wrapper {
+                    display: flex;
+                    section {
+                        div {
+                            h3 {
+                                font-size: 18px;
+                            }
+                            p {
+                                font-size: 17px;
+                            }
+                        }
+                        &:first-of-type {
+                            border-right: 1px solid $logo-color;
+                            width: 50%;
+                        }
+                        &:nth-child(2) {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

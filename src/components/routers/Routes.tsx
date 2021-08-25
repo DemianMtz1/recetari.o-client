@@ -2,8 +2,13 @@ import {
     Switch,
     Route
 } from 'react-router-dom';
+import { AgregaReceta } from '../../screens/AgregaReceta';
+import { EditarReceta } from '../../screens/EditarReceta';
 import { Home } from '../../screens/Home';
 import { Login } from '../../screens/LogIn';
+import { Register } from '../../screens/Register';
+import { TusRecetas } from '../../screens/TusRecetas';
+import { VerReceta } from '../../screens/VerReceta';
 
 export const Routes = () => {
     return (
@@ -14,14 +19,20 @@ export const Routes = () => {
             <Route path="/log-in" exact>
                 <Login />
             </Route>
+            <Route path="/register" exact>
+                <Register />
+            </Route>
             <Route path="/crear-recetas" exact>
-                Crear recetas
+                <AgregaReceta />
             </Route>
             <Route path="/tus-recetas" exact>
-                Tus recetas
+                <TusRecetas />
             </Route>
-            <Route path="/receta/:id" exact>
-                Receta by id
+            <Route path="/ver-receta/:id" exact>
+                <VerReceta />
+            </Route>
+            <Route path="/editar-receta/:id" exact>
+                <EditarReceta />
             </Route>
         </Switch>
     )
