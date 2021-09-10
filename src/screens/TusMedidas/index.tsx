@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import chefsitoMirar from '../../assets/img/chef-categorias.svg';
+import chefsitoMirar from '../../assets/img/chef-measures.svg';
 
 type Measure = {
     _id: string,
