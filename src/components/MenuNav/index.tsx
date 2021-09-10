@@ -9,6 +9,15 @@ export const MenuNav = (props: any) => {
             <>
                 <li><Link to="/crear-recetas">Agrega receta</Link></li>
                 <li><Link to="/tus-recetas">Tus recetas</Link></li>
+                {
+                    props.user.role === 'admin' ?
+                        <>
+                            <li><Link to="/admin/categorias">Categorias</Link></li>
+                            <li><Link to="/admin/medidas">Medidas</Link></li>
+                        </>
+                        :
+                        null
+                }
                 <li onClick={props.handleLogOut}>Cerrar Sesión</li>
             </>
         )
@@ -19,6 +28,15 @@ export const MenuNav = (props: any) => {
         <>
             <li><Link to="/crear-recetas">Agrega receta</Link></li>
             <li><Link to="/tus-recetas">Tus recetas</Link></li>
+            {
+                props.user.role === 'admin' ?
+                    <>
+                        <li><Link to="/admin/categorias">Categorias</Link></li>
+                        <li><Link to="/admin/medidas">Medidas</Link></li>
+                    </>
+                    :
+                    null
+            }
             <button type="button" className="primary-button" onClick={props.handleLogOut}>Cerrar Sesión</button>
         </>
     )

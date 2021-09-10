@@ -91,8 +91,9 @@ const Navbar = () => {
                                         <span className="icon-sm fas fa-times text-white" onClick={() => setVisibility({ isVisible: !visibility.isVisible })} ></span>
                                     </div>
                                     {
-                                        user.email ?
+                                        (user.email || user.role) ?
                                             <MenuNav
+                                                user={user}
                                                 isMobile={true}
                                                 handleLogOut={handleLogOut}
                                             />
@@ -107,8 +108,9 @@ const Navbar = () => {
                         }
                         <ul className="d-none d-md-flex">
                             {
-                                user.email ?
+                                (user.email || user.role) ?
                                     <MenuNav
+                                        user={user}
                                         handleLogOut={handleLogOut}
                                     />
                                     :
@@ -130,8 +132,9 @@ const Navbar = () => {
                                         <span className="icon-sm fas fa-times text-white" onClick={() => setVisibility({ isVisible: !visibility.isVisible })} ></span>
                                     </div>
                                     {
-                                        user.email ?
+                                        (user.email || user.role) ?
                                             <MenuNav
+                                                user={user}
                                                 isMobile={true}
                                                 handleLogOut={handleLogOut}
                                             />
@@ -146,8 +149,9 @@ const Navbar = () => {
                         }
                         <ul className="d-none d-md-flex">
                             {
-                                user.email ?
+                                (user.email || user.role) ?
                                     <MenuNav
+                                        user={user}
                                         handleLogOut={handleLogOut}
                                     />
                                     :
